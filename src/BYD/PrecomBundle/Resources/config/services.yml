@@ -1,0 +1,4 @@
+services:
+#    byd_precom.example:
+#        class: BYD\PrecomBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

@@ -1,0 +1,386 @@
+{% extends "BYDCoreBundle::layout.html.twig" %}
+
+{% block stylesheets %}
+            {{ parent() }}
+            <!-- Theme CSS -->
+            <link href="{{ asset('Ressources/css/home/agency.css') }}" rel="stylesheet">
+            <link href="{{ asset('Ressources/css/home/custom-style.css') }}" rel="stylesheet">
+            <!-- Custom Fonts -->
+            <link href="{{ asset('Ressources/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+            <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+{% endblock %}
+        
+{% block body %}
+
+<body id="page-top" class="index">
+    
+<!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <img class="logo-head" src="{{ asset('Ressources/img/home/logo-batis.png') }}" alt="logo batis" />
+                <a class="navbar-brand page-scroll" href="#page-top">Batis Your Dream</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#jobber">Nos services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#porteur">Vos besoins</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#apropos">À propos</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                
+                <div class="intro-heading">Ière plateforme de Freelance Malagasy</div>
+                <img class="logo-banniere" src="{{ asset('Ressources/img/home/logo-batis.png') }}" alt="logo batis" />
+                <div class="intro-lead-in">Batis Your Dream </div>
+                
+                
+                <a href="{{ path('fos_user_registration_register') }}" class="page-scroll btn btn-xl">S'inscrire</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Services Section -->
+    <section id="jobber">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Nos Services</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Freelance</h4>
+                    <p class="text-muted">Faites valoir vos compétences et votre disponibilité.</p>
+                </div>
+                <!--div class="col-md-3">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-users fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Equipe de Freelance</h4>
+                    <p class="text-muted">Constituez vous-même des Equipes de Freelance pour répondre à des  offres de grandes ampleurs.</p>
+                </div-->
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-user-plus fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Externalisation en Freelance </h4>
+                    <p class="text-muted">Externalisez une partie de votre activité à des freelances ou des équipes de freelance.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Annuaires</h4>
+                    <p class="text-muted">Soyez référencé du monde des Freelances et des Entreprises faisant appel aux freelances.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Grid Section -->
+    <!-- Affichage du choix entre porteur de projet et freelance -->
+    <section id="porteur" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Vous êtes</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-1 col-md-5 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="../Ressources/img/home/portfolio/roundicons.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Porteur de mission ?</h4>
+                        <p class="text-muted">
+                        Un ENTREPRISE qui souhaite externaliser une partie de votre tâche</br>
+                        Un PARTICULIER ou un ENTREPRENEUR qui a besoin d'un coup de main dans vos activités quotidiennes.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-offset-1 col-md-5 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="../Ressources/img/home/portfolio/startup-framework.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Un Freelance ?</h4>
+                        <p class="text-muted">
+                        Un PARTICULIER qui souhaite capitaliser votre disponibilité et votre compétence</br>
+                        Un ENTREPRENEUR ou un ENTREPRISE qui souhaite développer votre portfolio et votre CA</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3 class="section-subheading text-muted"></h3>
+                    <h2 class="section-heading">POURQUOI FAIRE…   </h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-1 col-md-5 col-sm-6 portfolio-item">
+                    <div class="portfolio-caption">
+                        <p class="col-md-offset-1  col-sm-offset-2 text-muted">
+                            Vous aurez accès à une MAIN D’OEUVRE POLYVALENTE, MOINS CHERE et REACTIVE.</br>
+                            </br>
+                            </br>
+                            Vous aurez le CHOIX entre plusieurs offres de qualité avec des COUTS TRES COMPETITIFS</p>
+                    </div>
+                    <h3 class="section-subheading text-muted"></h3>
+                    <a href="{{ path('fos_user_registration_register') }}" class="btn btn-success btn-lg btn-block">S'inscrire en tant que porteur de mission </a>
+                </div>
+                <div class="col-md-offset-1 col-md-5 col-sm-6 portfolio-item">
+                    <div class="portfolio-caption">
+                        <p class="col-md-offset-1 col-sm-offset-2 text-muted">
+                        Vous aurez à EXERCER et CAPITALISER selon votre disponibilité et vos compétences
+                                                            </br>
+                        Vous aurez à CONFIRMER vos compétences suivant vos prospections,
+                        réalisations et la satisfaction de votre clientèle ; tout en alimentant votre CV et Portfolio.</p>
+                    </div>
+                    <h3 class="section-subheading text-muted"></h3>
+                    <a href="{{ path('fos_user_registration_register') }}" class="btn btn-success btn-lg btn-block">S'inscrire en tant que freelance</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">À Propos</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="../Ressources/img/home/about/1.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2015-2016</h4>
+                                    <h4 class="subheading">Qui est BYD ?</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">BYD est une place de marché en prestations de services intellectuels 
+                                                          qui met en relation des porteurs de missions et des freelances/des équipes de freelances.</p>
+                                    
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="../Ressources/img/home/about/3.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2016-2017</h4>
+                                    <h4 class="subheading">Des missions ponctuelles et payés à la tâche.</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <ul>
+                                        <p class="text-muted"><li>Destinés à des Freelances individuels</li></p>
+                                        <!--p class="text-muted"><li>Destinés à une Equipe de freelance</li></p-->
+                                        <p class="text-muted"><li>Destinés à une Externalisation systématique en Freelance</li></p>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Notre équipe</h2>
+                    <!--<h3 class="section-subheading text-muted">Je ne sais pas quoi écrire ici.</h3>-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="../Ressources/img/home/team/tojo.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Tojo Hafaliana </h4>
+                        <p class="text-muted">Chief Executive Officer (CEO)</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/tojohafaliana"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="../Ressources/img/home/team/mamy.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Ny Andrianina</h4>
+                        <p class="text-muted">Web Developper</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/razafintsialonina"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="../Ressources/img/home/team/vanjasoa.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Vanjasoa</h4>
+                        <p class="text-muted">Web Developper</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/vanjasoa.andriarinoro"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="../Ressources/img/home/team/toky.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Toky</h4>
+                        <p class="text-muted">Operation Officer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Contact Section -->
+    {{ render(controller('BYDCoreBundle:Home:contactMessage')) }}
+    <!--end contact-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Batis 2016</span>
+                    
+                    <p class="nif">Nif : 3002455503 </br>
+                                   Stat: 63910 11 2016 0 05607 </br>
+                                   RC: 2016 A 01071 </br>
+                                   RCS : 2016 A 01071 </p>
+                    
+                
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-viadeo"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#"> batisyourdream@gmail.com</a>
+                        </li>
+                        <li><a href="#">(+261)34.49.107.27 / (+261)32.78.740.21</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+</body>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    
+    <!-- Plugin JavaScript -->
+    <script src="{{ asset('Ressources/js/home/jquery.easing.js') }}"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="{{ asset('Ressources/js/home/jqBootstrapValidation.js') }}"></script>
+    <script src="{{ asset('Ressources/js/home/contact_me.js') }}"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="{{ asset('Ressources/js/home/agency.min.js') }}"></script>
+{% endblock %}

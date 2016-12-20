@@ -1,3 +1,0 @@
-byd_precom_homepage:
-    path:     /precom
-    defaults: { _controller: BYDPrecomBundle:Default:index }

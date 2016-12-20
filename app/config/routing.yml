@@ -1,3 +1,14 @@
-byd_precom:
-    resource: "@BYDPrecomBundle/Resources/config/routing.yml"
+byd_platform:
+    resource: "@BYDPlatformBundle/Resources/config/routing.yml"
+    prefix:   /platform
+
+byd_core:
+    resource: "@BYDCoreBundle/Resources/config/routing.yml"
     prefix:   /
+
+byd_user:
+    resource: "@BYDUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

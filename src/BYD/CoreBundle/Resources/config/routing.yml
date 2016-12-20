@@ -1,0 +1,7 @@
+byd_core_homepage:
+    path:     /
+    defaults: { _controller: BYDCoreBundle:Default:index }
+
+byd_core_contactmessage:
+    path:     /sendContactMessage
+    defaults: { _controller: BYDCoreBundle:Home:contactMessage }

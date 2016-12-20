@@ -1,0 +1,14 @@
+{% extends "BYDUserBundle::layout.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('Ressources/css/user/style_register.css') }}" />
+{% endblock %}
+
+{% block fos_user_content %}
+{% include "BYDUserBundle:Registration:register_content.html.twig" %}
+{% endblock fos_user_content %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

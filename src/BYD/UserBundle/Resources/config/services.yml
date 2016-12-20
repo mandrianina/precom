@@ -1,0 +1,9 @@
+services:
+    byd_user.registration_listener:
+        class: BYD\UserBundle\EventListener\RegistrationListener
+        arguments: []
+        tags:
+            - { name: kernel.event_subscriber }
+#    byd_user.example:
+#        class: BYD\UserBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

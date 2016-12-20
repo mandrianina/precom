@@ -1,0 +1,13 @@
+.logo-banniere{
+    height: 20%;
+    width: 20%;
+    float: left;
+    position: relative;
+    bottom: 60px;
+    left: 200px;
+}
+.logo-head{
+    height: 50px;
+    width: 50px;
+    float: left;
+}
